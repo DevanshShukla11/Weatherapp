@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <title>weather app</title>
+   
+</head>
+<body>
+  
+   <div class="conatiner-fluid main_menu">
+       <div class="row" >
+           <div class="col-md-10 col-12 mx-auto">
+
+            <nav class="navbar navbar-expand-lg ">
+              <div class="containfaer-fluid"></div>
+              <i class="far fa-snowflake"></i>
+                <a class="nav-text" href="#">Devuviratian</a>
+               
+               
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+          
+                      <a class="nav-link"  href="/">Home<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="/about">About us</a> 
+                    
+                    
+                       
+                       <a class="nav-link" href="/weather">Weather</a>   
+                  </ul> 
+                </div>
+              
+            </nav>
+            </div>
+           </div>
+       </div>
+  
+
+   <div class="main_div">
+       <div class="row">
+              <div class="col-md-10 col-12 mx-auto">
+
+                    <div class= "main_content">
+                            <form class = "temp_form">
+                                         <input type="text"  id="cityname" placeholder="enter city" autocomplete="off">
+                                         <input type="submit" value="search" id="Submit">
+
+
+                             </form>
+
+                    </div>  
+
+                    <div class="temp_information">
+                              <div class="top_layer">
+                                    <p id="day">wednesday</p>
+                                    <p id ="today_date">26 may</p>
+                                </div>
+                       <div class="main_layer">
+                            <p id="city_name"></p>
+                           <div class="middle_layer data_hide">
+                               <p id="temp"><span id="temp_real">0</span><sup>o</sup>C</p>
+                               <p id="temp_status"><i  class="fa fa-cloud" aria-hidden="true"></i></p>
+                           </div>
+                       
+                                                  
+                        </div>
+                    </div>  
+             </div>
+       </div>
+   </div>
+   
+ <script src="/main.js"></script>
+ <script>
+   const day = document.getElementById("day");
+   const getCurrentDay = () => {
+        var weekday = new Array(7);
+                                        //FOR NOT GETTINGVALUES IN THE FORM OF INDEXES WEEKDAY VALUE AS 0,1,2,3,4,5,6 WE HAVE TO STORE THEM IN AN ARRAY AND ASSIGN 
+                                        //THEM VALUES RESPRCTIVELY.                      
+             weekday[0] = "Sunday";
+             weekday[1] = "Monday";
+             weekday[2] = "Tuesday";
+             weekday[3] = "Wednesday";
+             weekday[4] = "Thursday";
+             weekday[5] = "Friday";
+             weekday[6] = "Saturnday";
+
+            let currentTime = new Date();
+            let days = weekday[currentTime.getDay()];//THIS METHOD IS USED TO FETCH CURRENT DAY . i.e SATURDAY VALUE=6 .
+            day.innerText=days;
+
+           
+         };
+         getCurrentDay();
+ </script>
+
+   </body>
+</html>
