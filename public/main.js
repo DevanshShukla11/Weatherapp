@@ -50,7 +50,7 @@ let cityVal = cityName.value;
     }
 }
 
-//submitBtn.addEventListener('click', getInfo);
+submitBtn.addEventListener('click', getInfo);
 
 
 
