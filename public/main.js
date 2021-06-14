@@ -16,7 +16,7 @@ let cityVal = cityName.value;
     }
     else{
         try{
-        let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=806fb2b035a782bb65e544ab09dd1317`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=806fb2b035a782bb65e544ab09dd1317`;
         const response =   await fetch(url);
         const data = await response.json();
         const arrData = [data];
