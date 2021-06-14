@@ -24,6 +24,7 @@ app.get("/weather" , (req , res)=>
 {
     res.render("weather")
 })
+
 app.get("*" , (req , res)=> 
 {
     res.send("404error")
